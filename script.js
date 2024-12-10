@@ -88,8 +88,10 @@ store.addProduct(apple);
 
 console.log(chickenLegs.getTotalValue());
 console.log(milk.toString());
-console.log(store.getInventoryValue().toFixed(2));
+
 console.log(store.findProductByName('chickpeas'));
 
-ProductProperties.applyDiscount(store.inventory, 0.15);                            //applying given discount to inventory array
-console.log(store.getInventoryValue().toFixed(2));                                 //logging discounted items
+
+console.log(`Total price before discount: ${store.getInventoryValue().toFixed(2)}`);                  //logging inventory price before discount applied
+ProductProperties.applyDiscount(store.inventory, 0.15);                                               //applying given discount to inventory array
+console.log(`Total price after discount: ${store.getInventoryValue().toFixed(2)}`);                                 //logging discounted items
