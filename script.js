@@ -38,6 +38,18 @@ class Store {                      //initializing store class with inventory arr
     constructor() {
         this.inventory = [];
     }
+
+
+addProduct(product) {
+    this.inventory.push(product);                            //method to add product to inventory array
+    }
+    getInventoryValue() {
+        let inventoryValue = 0;
+        for (i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
+            inventoryValue += this.inventory[i];
+        }
+    }
+
 };
 
 
