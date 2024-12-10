@@ -15,7 +15,7 @@ class ProductProperties {                                         //parent class
     }
     static applyDiscount(products, discount) {                        //loops through array of products and applies discount
         products.array.forEach(product => {
-            product.price - +product.price * discount;
+            product.price -= product.price * discount;
             
         });
     }
@@ -46,21 +46,17 @@ addProduct(product) {
 getInventoryValue() {
     let inventoryValue = 0;
     for (i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
-    inventoryValue += this.inventory[i];
+    inventoryValue += this.inventory[i].getTotalValue();
     }
     return inventoryValue;
     }
     findProductByName(name) {
-        for (i in this.inventory) {                                   //name search method
-            if (i === name) {
-                return name;
-            } else {
-                name === null;
-                return name;
+        for (let i = 0; i < this.inventory.length; i++) {
+            if (this.inventory[i].name === name) {
+                return this.inventory[i];
             }
         }
-
-
+        return null; 
     }
 };
 
@@ -75,6 +71,12 @@ const chickenLegs = new PerishableProductProperties('Chicken legs', 9.99, 7, 'De
 const milk = new PerishableProductProperties('milk', 4.50, 3, 'feb 13, 2025');
 const eggs = new PerishableProductProperties('eggs', 5.00, 20, 'march 2, 2025'); 
 const apple = new PerishableProductProperties('apple', 2.00, 5, 'jan 2, 2025');
+
+
+//---------------------------------------------------------------------------//
+
+Store(tinFoil);
+
 
 console.log(apple.getTotalValue());
 console.log(milk.toString());
