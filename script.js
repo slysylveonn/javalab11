@@ -32,6 +32,12 @@ class PerishableProductProperties extends ProductProperties {              //sub
         \nQuantity: ${this.quantity}
         \nExpiration Date: ${this.expirationDate}`);
     }
+}
+
+class Store {                      //initializing store class with inventory array
+    constructor() {
+        this.inventory = [];
+    }
 };
 
 
