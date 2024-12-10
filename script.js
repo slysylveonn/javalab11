@@ -45,7 +45,7 @@ addProduct(product) {
     }
 getInventoryValue() {
     let inventoryValue = 0;
-    for (i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
+    for (let i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
     inventoryValue += this.inventory[i].getTotalValue();
     }
     return inventoryValue;
@@ -74,16 +74,19 @@ const apple = new PerishableProductProperties('apple', 2.00, 5, 'jan 2, 2025');
 
 
 //---------------------------------------------------------------------------//
+const store = new Store();                                                  //initializing new store 
 
-Store.addProduct(tinFoil);                                                 //adding product objects to Store Inventory array
-Store.addProduct(paperTowel);
-Store.addProduct(chickpeas);
-Store.addProduct(kraftDinner);
-Store.addProduct(chickenLegs);
-Store.addProduct(milk);
-Store.addProduct(eggs);
-Store.addProduct(apple);
+store.addProduct(tinFoil);                                                 //adding product objects to Store Inventory array
+store.addProduct(paperTowel);
+store.addProduct(chickpeas);
+store.addProduct(kraftDinner);
+store.addProduct(chickenLegs);
+store.addProduct(milk);
+store.addProduct(eggs);
+store.addProduct(apple);
 
 
 console.log(apple.getTotalValue());
 console.log(milk.toString());
+console.log(store.getInventoryValue());
+console.log(store.findProductByName('chickpeas'));
