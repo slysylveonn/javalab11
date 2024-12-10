@@ -27,3 +27,11 @@ class PerishableProductProperties extends ProductProperties {              //sub
         \nExpiration Date: ${this.expirationDate}`);
     }
 };
+
+
+const apple = new ProductProperties('apple', 2.00, 5);
+const milk = new PerishableProductProperties('milk', 4.50, 3, 'feb 13, 2025');
+const eggs = new PerishableProductProperties('eggs', 5.00, 20, 'march 2, 2025'); 
+
+console.log(apple.getTotalValue());
+console.log(milk.toString());
