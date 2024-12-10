@@ -43,13 +43,25 @@ class Store {                      //initializing store class with inventory arr
 addProduct(product) {
     this.inventory.push(product);                            //method to add product to inventory array
     }
-    getInventoryValue() {
-        let inventoryValue = 0;
-        for (i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
-            inventoryValue += this.inventory[i];
-        }
+getInventoryValue() {
+    let inventoryValue = 0;
+    for (i = 0; i < this.inventory.length; i++) {                    //method to iterate through inventory array and calculate total value
+    inventoryValue += this.inventory[i];
     }
+    return inventoryValue;
+    }
+    findProductByName(name) {
+        for (i in this.inventory) {
+            if (i === name) {
+                return name;
+            } else {
+                name === null;
+                return name;
+            }
+        }
 
+
+    }
 };
 
 
