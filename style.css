@@ -5,9 +5,19 @@ body {
     text-align: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 header {
     background-color: black;
     margin-left:0%;
     width: 100%;
+}
+div {
+    color: black;
+    margin: auto;
+    width: 30%;
+    padding: 20px;
+    background-color:rgba(255, 225, 192, 0.708);
+    border-style: solid;
+    border-color: black;
 }
