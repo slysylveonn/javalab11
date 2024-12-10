@@ -51,7 +51,7 @@ getInventoryValue() {
     return inventoryValue;
     }
     findProductByName(name) {
-        for (i in this.inventory) {
+        for (i in this.inventory) {                                   //name search method
             if (i === name) {
                 return name;
             } else {
@@ -64,8 +64,12 @@ getInventoryValue() {
     }
 };
 
+//adding objects to class
 
 const apple = new ProductProperties('apple', 2.00, 5);
+const chickpeas = new ProductProperties('chickpeas', 1.99, 21);
+const kraftDinner = new ProductProperties('Kraft Dinner', 3.50, 17);
+const chickenLegs = new PerishableProductProperties('Chicken legs', 9.99, 7, 'Dec 31, 2025');
 const milk = new PerishableProductProperties('milk', 4.50, 3, 'feb 13, 2025');
 const eggs = new PerishableProductProperties('eggs', 5.00, 20, 'march 2, 2025'); 
 
