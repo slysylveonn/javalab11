@@ -1,0 +1,13 @@
+body {
+    background-image: url('https://images.pexels.com/photos/1708601/pexels-photo-1708601.jpeg?cs=srgb&dl=pexels-brett-sayles-1708601.jpg&fm=jpg');
+    color:antiquewhite;
+    font-family: fantasy;
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+header {
+    background-color: black;
+    margin-left:0%;
+    width: 100%;
+}
