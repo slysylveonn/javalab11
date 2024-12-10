@@ -21,3 +21,7 @@ div {
     border-style: solid;
     border-color: black;
 }
+.tree {
+    height: 100px;
+    width: 100px;
+}
