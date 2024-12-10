@@ -75,7 +75,14 @@ const apple = new PerishableProductProperties('apple', 2.00, 5, 'jan 2, 2025');
 
 //---------------------------------------------------------------------------//
 
-Store(tinFoil);
+Store.addProduct(tinFoil);                                                 //adding product objects to Store Inventory array
+Store.addProduct(paperTowel);
+Store.addProduct(chickpeas);
+Store.addProduct(kraftDinner);
+Store.addProduct(chickenLegs);
+Store.addProduct(milk);
+Store.addProduct(eggs);
+Store.addProduct(apple);
 
 
 console.log(apple.getTotalValue());
