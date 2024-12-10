@@ -14,7 +14,7 @@ class ProductProperties {                                         //parent class
         \nQuantity: ${this.quantity}`);
     }
     static applyDiscount(products, discount) {                        //loops through array of products and applies discount
-        products.array.forEach(product => {
+        products.forEach(product => {
             product.price -= product.price * discount;
             
         });
@@ -86,7 +86,10 @@ store.addProduct(eggs);
 store.addProduct(apple);
 
 
-console.log(apple.getTotalValue());
+console.log(chickenLegs.getTotalValue());
 console.log(milk.toString());
-console.log(store.getInventoryValue());
+console.log(store.getInventoryValue().toFixed(2));
 console.log(store.findProductByName('chickpeas'));
+
+ProductProperties.applyDiscount(store.inventory, 0.15);                            //applying given discount to inventory array
+console.log(store.getInventoryValue().toFixed(2));                                 //logging discounted items
